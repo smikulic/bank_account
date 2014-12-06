@@ -13,6 +13,7 @@
 
             _bankAccount.handleViews();
             _bankAccount.savePayee();
+            _bankAccount.payment();
         },
 
         handleViews: function() {
@@ -65,6 +66,12 @@
                     var newPayee = $('#payeeName').val();
                     _bankAccount.addNewPayee( newPayee );
                     $('#payeeName').val('');
+
+                    // modal confirmation
+                    $('.modalConfirmPayee').modal()
+                    setTimeout(function(){
+                        $(".modalConfirmPayee").modal('hide');
+                    }, 2500);
                 }
 
             });
@@ -76,6 +83,32 @@
 
             $('.choosePayee').find('.noPayee').remove();
             $('.choosePayee').append( payeeField );
+        },
+
+        payment: function() {
+            var selected = false;
+
+            $('body').on('click', '.payeeField', function() {
+                $('.payeeField').each(function() {
+                    $(this).removeClass('active');
+                });
+                $(this).addClass('active');
+                selected = true;
+            });
+
+            $('.sendPayment').on('click', function(e) {
+                e.preventDefault();
+
+                // if selected payee and amount exists
+                if (selected && $('#amount').val()) {
+
+                    // modal confirmation
+                    $('.modalConfirmPayment').modal()
+                    setTimeout(function(){
+                        $(".modalConfirmPayment").modal('hide');
+                    }, 2500);
+                }
+            });
         }
 
     };

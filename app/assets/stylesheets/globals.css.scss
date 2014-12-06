@@ -32,3 +32,11 @@ input[type="text"], input[type="number"], textarea, select {
 		}
 	}
 }
+
+// Modals
+.modal-backdrop.in {
+	opacity: 0;
+}
+.modal-content {
+	padding: 16px;
+}
