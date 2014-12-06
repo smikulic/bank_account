@@ -8,11 +8,6 @@ $orange:		#f16531;
 $blue:			#104684;
 $gray-light:	#eeeeee;
 
-.bg-green {
-	background-color: $green;
-	color: white;
-}
-
 // Position and states
 .mt {
 	margin-top: 25px;
@@ -27,13 +22,23 @@ $gray-light:	#eeeeee;
 	display: block;
 }
 .active {
-	color: $orange;
+	color: $orange !important;
 }
 .success {
 	border: 1px solid $green !important;
 }
 .error {
 	border: 1px solid $red !important;
+}
+.bg-green {
+	background-color: $green;
+	color: white;
+}
+.positive {
+	color: $green;
+}
+.negative {
+	color: $red;
 }
 
 // Elements
@@ -74,38 +79,4 @@ $gray-light:	#eeeeee;
 
 .info {
 	border-left: 1px solid $orange;
-}
-
-.paymentFunnel {
-	border-right: 1px solid orange;
-	padding: 0;
-	min-height: 380px;
-}
-
-.payeeField {
-	margin-top: -1px;
-	height: 85px;
-	line-height: 85px;
-	text-align: center;
-	border-top: 1px dotted gray;
-	border-bottom: 1px dotted gray;
-	&:hover {
-		cursor: pointer;
-		box-shadow: 1px 1px 1px $gray-light;
-	}
-	&.addPayee {
-		.glyphicon {
-			margin-top: 22px;
-			font-size: 45px;
-			color: gray;
-		}
-	}
-}
-
-#amount {
-	height: 84px;
-	line-height: 84px;
-	font-size: 48px;
-	border: 0;
-	border-bottom: 1px solid $gray-light;
 }

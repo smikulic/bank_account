@@ -1,0 +1,42 @@
+.makePaymentView {
+	.paymentFunnel {
+		border-right: 1px solid orange;
+		padding: 0;
+		min-height: 380px;
+	}
+
+	.payeeField {
+		margin-top: -1px;
+		height: 65px;
+		line-height: 65px;
+		text-align: center;
+		border-top: 1px dotted $gray-light;
+		border-bottom: 1px dotted $gray-light;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 1px 1px 1px $gray-light;
+		}
+		&.addPayee {
+			.glyphicon {
+				margin-top: 12px;
+				font-size: 40px;
+				color: gray;
+			}
+		}
+	}
+
+	#amount, #date {
+		&:hover {
+			box-shadow: 1px 1px 1px $gray-light !important;
+		}
+	}
+	#date {
+		font-size: 20px;
+		border-top: 1px dotted $gray-light !important;
+		border-bottom: 1px solid $gray-light !important;
+		border-radius: 0;
+		&:hover {
+			box-shadow: 1px 1px 1px $gray-light !important;
+		}
+	}
+}

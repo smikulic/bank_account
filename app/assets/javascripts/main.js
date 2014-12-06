@@ -2,8 +2,8 @@
 
     var _cfg = {
         docBody: $('body'),
-        inputPayee: $('#payeeName'),
-        savePayee: $('.savePayee')
+        payeeConfirmation: 'You have successfully added new payee!',
+        paymentConfirmation: 'You have successfully made a payment!'
     };
 
 
@@ -67,11 +67,7 @@
                     _bankAccount.addNewPayee( newPayee );
                     $('#payeeName').val('');
 
-                    // modal confirmation
-                    $('.modalConfirmPayee').modal()
-                    setTimeout(function(){
-                        $(".modalConfirmPayee").modal('hide');
-                    }, 2500);
+                    _bankAccount.modalConfirmation( _cfg.payeeConfirmation );
                 }
 
             });
@@ -101,14 +97,16 @@
 
                 // if selected payee and amount exists
                 if (selected && $('#amount').val()) {
-
-                    // modal confirmation
-                    $('.modalConfirmPayment').modal()
-                    setTimeout(function(){
-                        $(".modalConfirmPayment").modal('hide');
-                    }, 2500);
+                    _bankAccount.modalConfirmation( _cfg.paymentConfirmation );
                 }
             });
+        },
+
+        modalConfirmation: function( text ) {
+            $('.modalConfirm').modal().find('.modal-content').text( text );
+            setTimeout(function(){
+                $(".modalConfirm").modal('hide');
+            }, 2500);
         }
 
     };
