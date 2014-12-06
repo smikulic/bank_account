@@ -66,6 +66,8 @@
                     var newPayee = $('#payeeName').val();
                     _bankAccount.addNewPayee( newPayee );
                     $('#payeeName').val('');
+                    $('#bank').val('');
+                    $('#iban').val('');
 
                     _bankAccount.modalConfirmation( _cfg.payeeConfirmation );
                 }
@@ -98,6 +100,8 @@
                 // if selected payee and amount exists
                 if (selected && $('#amount').val()) {
                     _bankAccount.modalConfirmation( _cfg.paymentConfirmation );
+                    $('#amount').val('');
+                    $('#date').val('');
                 }
             });
         },
