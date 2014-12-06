@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+/* line 12, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.mt {
+  margin-top: 25px;
+}
+
+/* line 15, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.mt-nav {
+  margin-top: 85px;
+}
+
+/* line 18, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.hide {
+  display: none;
+}
+
+/* line 21, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.show {
+  display: block;
+}
+
+/* line 24, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.active {
+  color: #f16531;
+}
+
+/* line 27, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.success {
+  border: 1px solid #50b948 !important;
+}
+
+/* line 30, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.error {
+  border: 1px solid red !important;
+}
+
+/* line 35, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.btn-bank-account {
+  display: inline-block;
+  width: 100%;
+  padding: 7px 10px 7px 10px;
+  border: 1px solid #f16531;
+  background-color: #f16531;
+  color: white;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 46, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.btn-bank-account:hover {
+  border: 1px solid #104684;
+  background-color: #104684;
+  color: white;
+  transition: background-color 100ms linear;
+}
+
+/* line 54, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.box {
+  display: block;
+  padding: 10px 20px;
+  height: 85px;
+  width: 100%;
+  border-radius: 20px;
+  color: white;
+  background-color: gray;
+}
+/* line 62, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.box.box-blue {
+  background-color: #104684;
+}
+/* line 65, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.box.box-orange {
+  background-color: #f16531;
+}
+
+/* line 70, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.info {
+  border-left: 1px solid #f16531;
+}
+
+/* line 74, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.paymentFunnel {
+  border-right: 1px solid orange;
+  padding: 0;
+  min-height: 380px;
+}
+
+/* line 80, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.payeeField {
+  margin-top: -1px;
+  height: 85px;
+  line-height: 85px;
+  text-align: center;
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
+}
+/* line 87, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.payeeField:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #eeeeee;
+}
+/* line 92, /Users/smikulic/rails/bank_account/app/assets/stylesheets/helpers/_utility.css.scss */
+.payeeField.addPayee .glyphicon {
+  margin-top: 22px;
+  font-size: 45px;
+  color: gray;
+}
+
+/* line 5, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+input[type="text"], input[type="number"], textarea, select {
+  padding: 6px 10px 6px 10px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* line 11, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+.navbar-bank-account {
+  background-color: white;
+  height: 85px;
+}
+/* line 14, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+.navbar-bank-account .navbar-brand {
+  height: 84px;
+  line-height: 55px;
+}
+/* line 18, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+.navbar-bank-account li {
+  border-left: 1px dotted gray;
+  border-right: 1px dotted gray;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  /* line 18, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+  .navbar-bank-account li {
+    width: 140px;
+  }
+}
+/* line 25, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+.navbar-bank-account li > a {
+  height: 84px;
+  line-height: 45px;
+}
+/* line 28, /Users/smikulic/rails/bank_account/app/assets/stylesheets/globals.css.scss */
+.navbar-bank-account li > a span {
+  display: block;
+  text-align: center;
+}
