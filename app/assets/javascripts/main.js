@@ -99,7 +99,10 @@
 
                 // if selected payee and amount exists
                 if (selected && $('#amount').val()) {
+
                     _bankAccount.modalConfirmation( _cfg.paymentConfirmation );
+                    _bankAccount.updateBalance( $('#amount').val() );
+
                     $('#amount').val('');
                     $('#date').val('');
                 }
@@ -111,6 +114,13 @@
             setTimeout(function(){
                 $(".modalConfirm").modal('hide');
             }, 2500);
+        },
+
+        updateBalance: function( transaction ) {
+            var currentBalance = $('.currentBalance').text(),
+                updatedBalance = +currentBalance - transaction;
+
+            $('.currentBalance').text( updatedBalance );
         }
 
     };
