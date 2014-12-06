@@ -1,7 +1,34 @@
 // Global classes
 //-------------------------------
+@import "helpers/utility";
+
+input[type="text"], input[type="number"], textarea, select {
+	padding: 6px 10px 6px 10px;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
 
 .navbar-bank-account {
 	background-color: white;
 	height: 85px;
+	.navbar-brand {
+		height: 84px;
+		line-height: 55px;
+	}
+	li {
+		@media (min-width: 768px) {
+			width: 140px;
+		}
+		border-left: 1px dotted gray;
+		border-right: 1px dotted gray;
+		background-color: white;
+		> a {
+			height: 84px;
+			line-height: 45px;
+			span {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
 }
